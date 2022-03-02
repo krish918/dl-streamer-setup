@@ -1,2 +1,2 @@
 # dl-streamer-setup
-A basic docker-compose file to help setup Intel VAS container
+A basic docker-compose file to help setup Intel VAS container and MQTT broker container.
