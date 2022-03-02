@@ -1,0 +1,20 @@
+version: "1.0"
+services:
+  intelvas:
+    image: intel/dlstreamer-pipeline-server:latest
+    container_name: dlstreamer
+    privileged: true
+    ports:
+      - '8080:8080'
+      - '8554:8554'
+    networks:
+      - app_network
+    volumes:
+      - /tmp:/tmp
+    environment:
+      - ENABLE_RTSP=true
+      - RTSP_PORT=8554
+
+networks:
+  app_network:
+    driver: "bridge"
